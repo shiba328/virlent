@@ -1,7 +1,0 @@
-{
-  "extends": [
-  ],
-  "rules": {
-    "string-quotes": "single"
-  }
-}
