@@ -29,32 +29,37 @@ html(lang="ja")
             var items = {
               'Product': [
                 {
-                  title: 'Join+Image',
+                  title: 'Re:Meet',
+                  body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）',
+                  tag: ['WebRTC', 'GCP', 'firebase', 'NuxtJS'],
+                  to: ['toBtoC'],
+                  link: 'https://remeet.live/'
+                },
+                {
+                  title: '画像くっつけたー(pictcolla)',
                   body: 'Canvasを利用して,ブラウザでアップした画像をつなげて一枚画像として出力する',
-                  tag: ['HTML/CSS', 'JS'],
                   to: ['toC'],
-                  link: 'https://example.com'
+                  link: 'https://shiba328.github.io/join-images/'
                 },
                 {
                   title: 'チケットメーカー',
                   body: '自宅やネットプリント・オフィスプリントで手軽にシリアルナンバーのついたチケットをA4サイズに好きな綴で出力できるサービス',
-                  tag: ['NuxtJS', 'LocalStorage'],
+                  tag: ['NuxtJS'],
                   to: ['toC','toB'],
-                  link: 'https://example.com'
+                  link: 'https://bango.tech/ticketmaker/'
                 },
                 {
                   title: 'BANGOTECH',
                   body: '発番管理システム',
                   tag: ['NuxtJS', 'firebase'],
-                  to: ['toB'],
-                  link: 'https://example.com'
+                  to: ['toB']
                 },
                 {
                   title: 'QUSY',
                   body: 'クイズ統括管理システム',
-                  tag: ['NuxtJS', 'firebase', 'GCR', 'CI'],
+                  tag: ['NuxtJS', 'firebase', 'GCP'],
                   to: ['toBtoC'],
-                  link: 'https://example.com'
+                  link: 'https://qusy.app'
                 }
               ],
               'Work': [
@@ -94,6 +99,8 @@ html(lang="ja")
                   if item.src
                     .card-image
                       .img(style=`background-image: url(${item.src})`)
+                  if item.link
+                    a(href=`${item.link}`) プロダクトサイトへ
                   .card-body
                     .card-text
                       if item.to
