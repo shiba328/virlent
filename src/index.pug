@@ -99,8 +99,6 @@ html(lang="ja")
                   if item.src
                     .card-image
                       .img(style=`background-image: url(${item.src})`)
-                  if item.link
-                    a(href=`${item.link}`) プロダクトサイトへ
                   .card-body
                     .card-text
                       if item.to
@@ -109,6 +107,9 @@ html(lang="ja")
                             span.chip #{i}
                       if item.title
                         .title #{item.title}
+                      if item.link
+                        .link
+                          a(href=`${item.link}`) プロダクトサイトへ
                       if item.body
                         .description #{item.body}
                       if item.tag
