@@ -1,3 +1,20 @@
+@import "tailwindcss";
+
+/* フォント設定 */
 body {
-  background: #000;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  /* 文字のアンチエイリアスを効かせて綺麗に見せる */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* スクロール時のヘッダー被りを考慮したオフセット */
+  scroll-padding-top: 4rem; 
+}
+
+/* アクセントカラーのグラデーション定義（テキスト用） */
+.text-gradient-accent {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
 }
